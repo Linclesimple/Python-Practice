@@ -1,2 +1,2 @@
 # Python-Practice
-Answers of some questions
+Begin with some simple cases.
