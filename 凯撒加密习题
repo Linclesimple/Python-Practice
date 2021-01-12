@@ -1,0 +1,17 @@
+alphabet_a = "abcdefghijklmnopqrstuvwxyz"    #建表
+alphabet_A = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+char = input()                               #输入
+for i in range(0,len(char)):                 #逐一判断输入字符
+    if 65 <= ord(char[i]) <= 90:             #判断输入为大写
+        j = 0
+        while char[i] != alphabet_A[j]:      #定位该字母在大写字母表中的位置
+            j += 1
+        print(alphabet_A[(j+3)%26],end = "") #后移三位
+    elif 97 <= ord(char[i]) <= 122:          #判断输入为小写
+        j = 0
+        while char[i] != alphabet_a[j]:      #定位该字母在小写字母表中的位置
+            j += 1
+        print(alphabet_a[(j+3)%26],end = "") #后移三位
+    else:                                    #输入为空格或特殊字符
+        print(char[i],end = "")
